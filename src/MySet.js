@@ -1,7 +1,6 @@
 class MySet {
   constructor(values) {
     this._storage = this._saveValuesToStorage(values);
-
     this[Symbol.iterator] = () => {
       const arr = Object.values(this._storage);
       let current = 0;
@@ -22,6 +21,10 @@ class MySet {
         },
       };
     };
+  }
+
+  get [Symbol.toStringTag]() {
+    return this.constructor.name;
   }
 
   get size() {

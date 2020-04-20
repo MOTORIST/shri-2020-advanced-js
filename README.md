@@ -13,6 +13,8 @@ const { allKeysAndSymbols, proxyIn, asyncExecutor } = require("./src/index.js");
 
     const set = new MySet([{ id: 1 }, { id: 2 }, { id: 1 }]);
 
+    console.log("set === set.valueOf()", set === set.valueOf());
+    console.log("String(set)", String(set));
     console.log([...set]);
     console.log("Size", set.size);
     console.log("Has", set.has({ id: 2 }));
