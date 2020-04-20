@@ -5,7 +5,24 @@
 ### Prerequisites
 
 ```
-const { allKeysAndSymbols, proxyIn, asyncExecutor } = require("..../index.js");
+const { allKeysAndSymbols, proxyIn, asyncExecutor } = require("./src/index.js");
+```
+
+```
+    const MySet = require("./src/MySet");
+
+    console.log([...set]);
+    console.log("Size", set.size);
+    console.log("Has", set.has({ id: 2 }));
+    set.add({ id: 10 });
+    console.log("HAS Add", set.has({ id: 10 }));
+    console.log("Has DELETE 1 true", set.has({ id: 1 }));
+    set.delete({ id: 1 });
+    console.log("Has DELETE 1 false", set.has({ id: 1 }));
+    set.clear();
+    console.log("Has clear"), [...set];
+
+    ...
 ```
 
 ### Tests
